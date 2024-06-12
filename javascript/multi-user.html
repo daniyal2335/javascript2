@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi user</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register user</h1>
+        <label for="">Name</label>
+        <input type="text" id="name">
+        <br>
+        <br>
+        <label for="">password</label>
+        <input type="text" id="pass">
+        <br>
+        <br>
+        <button onclick="reg()">Register</button>
+    </div>
+    <!-- 
+    login form -->
+    <div class="container">
+        <h1>login user</h1>
+        <label for="">Name</label>
+        <input type="text" id="std_name">
+        <br>
+        <br>
+        <label for="">password</label>
+        <input type="text" id="std_pass">
+        <br>
+        <br>
+        <button onclick="login()">login</button>
+    </div>
+    <script>
+        let data = [];
+        function reg() {
+
+            let s_name = document.querySelector("#name").value;
+            let s_pass = document.querySelector("#pass").value;
+            data.push({ 'name': s_name, 'password': s_pass });
+            localStorage.setItem('users', JSON.stringify(data));
+            alert("register");
+        }
+        function login() {
+
+            let sname = document.querySelector("#std_name").value;
+            let spass = document.querySelector("#std_pass").value;
+            let AllData = localStorage.getItem('users');
+            // console.log(AllData);
+            let AllParseData = JSON.parse(AllData);
+            // console.log(AllParseData);
+            let MachData = AllParseData.find(function (record) {
+                return record.name == sname && record.password == spass
+            })
+            if (MachData) {
+                document.querySelector("h1").innerHTML = "welcome" + sname;
+            }
+            else {
+                document.querySelector("h1").innerHTML = "invalid user or password";
+            }
+
+
+        }      
+    </script>
+</body>
+
+</html>

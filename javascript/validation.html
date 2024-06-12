@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration</h1>
+    <table border="1px">
+        <tr>
+            <td align="right">Enter Name:</td>
+            <td><input type="text" placeholder="enter your name" id="t1" class="tb"></td>
+        </tr>
+       
+        <tr>
+            <td align="right">Email:</td>
+            <td><input type="text" placeholder="enter your email" id="t2" class="tb"></td>
+        </tr>
+        <tr>
+            <td align="right">User Name:</td>
+            <td><input type="text" placeholder="enter your Username" id="t3" class="tb"></td>
+        </tr>
+        <tr>
+            <td align="right">password:</td>
+            <td><input type="text" placeholder="enter your password" id="t4" class="tb"></td>
+        </tr>
+        <tr>
+            <td align="right">Confirm password:</td>
+            <td><input type="text" placeholder="enter your confirm password" id="t5" class="tb"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <input type="reset" value="Clear Form" onclick="clearFunc()" id="res" class="btn" />
+            <input type="submit" value="Create Account" class="btn" onclick="registration()" /></td>
+            </tr>
+    </table>
+    </div>
+    <script>
+        function registration()
+	{
+
+		let name= document.getElementById("t1").value;
+		let email= document.getElementById("t2").value;
+		let uname= document.getElementById("t3").value;
+		let pwd= document.getElementById("t4").value;			
+		let cpwd= document.getElementById("t5").value;
+        if(name=='')
+		{
+			alert('Please enter your name');
+		}	else if(email=='')
+		{
+			alert('Please enter your user email id');
+		}
+      
+        else if(uname=='')
+		{
+			alert('Please enter the user name.');
+		}
+        else
+		{				                            
+               alert('Thank You for Login & You are Redirecting to Campuslife Website');
+
+    }
+}
+function clearFunc()
+	{
+		document.getElementById("t1").value="";
+		document.getElementById("t2").value="";
+		document.getElementById("t3").value="";
+		document.getElementById("t4").value="";
+		document.getElementById("t5").value="";
+	}
+    </script>
+</body>
+</html>

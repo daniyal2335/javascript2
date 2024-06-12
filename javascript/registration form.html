@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins','sans-serif';
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4070f4;
+        }
+        .container{
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 6px;
+            background-color: #fff;
+            padding: 30px;
+            margin: 0 15px;
+            box-shadow: 0 5px 10px rgba(0,0,0, 1);
+        }
+        .container header{
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+        .container header ::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 3px;
+            width: 27px;
+            border-radius: 8px;
+            background-color: #4070f4;
+        }
+        .container form{
+            position: relative;
+            margin-top: 16px;
+            min-height: 490px;
+            background-color: #fff;
+        }
+        .containerform.details{
+            margin-top: 10px;
+        }
+        .container form.title{
+            font-size: 16px;
+            font-weight: 500;
+            margin: 6px 0;
+            color: #333;
+        }
+        .container form.fields{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        form.fields.input-fields{
+            display: flex;
+            width: calc(100% /3-15px);
+            flex-direction: column;
+        }
+        
+
+    </style>
+</head>
+<body>
+  <div class="container">
+        <header>Registration</header>
+
+<form action="#">
+
+<div class="form first">
+<div class="details personal">
+        <span class="title">Personal details</span>
+<div class="fields">
+    <div class="input-fields">
+
+<label for="">Full Name</label>
+<input type="text" placeholder="Enter your name">
+</div>
+<div class="input-fields">
+    <label for="">Date of Birth</label>
+<input type="text" placeholder="Enter Birth Date">
+   </div>
+    <div class="input-fields">
+        <label for="">Email</label>
+        <input type="text" placeholder="Enter your email">
+        
+    </div>
+</div>
+</div>
+    </div>
+
+</form>
+</body>
+</html>
